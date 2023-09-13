@@ -7,6 +7,8 @@ import Cart from "./components/Cart";
 
 import Item from "./components/Item";
 
+import Login from "./pages/Login";
+
 import{
   createBrowserRouter,
   Outlet,
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
       {
         path:"/Cart",
         element:<Cart/>,
+      },
+      {
+        path:"/login",
+        element:<Login/>,
       }
     ],
   }
