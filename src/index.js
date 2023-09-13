@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { PersistGate } from 'redux-persist/integration/react'
 
-import {app} from "./Firebase.config";
+import {app} from "./firebase.config";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
