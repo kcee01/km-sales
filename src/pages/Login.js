@@ -4,7 +4,7 @@ import { googleLogo,facebookLogo } from "../assests";
 
 const Login = () => {
   return (
-    <div className='w-full flex flex-col items-center justify-center gap-10 py-20'>
+    <div className='w-full flex flex-col items-center justify-center gap-1 py-10'>
       <div className='w-full flex items-center justify-center gap-10'>
         <div className='text-base w-60 h-12 tracking-wide border-[1px] border-gray-400
          rounded-md flex items-center justify-center gap-2 hover:border-blue-600 cursor-pointer duration-300'>
@@ -16,7 +16,7 @@ const Login = () => {
             Sign Out
         </button>
       </div>
-      <div className='w-full flex flex-col items-center justify-center gap-10 py-20'>
+      <div className='w-full flex flex-col items-center justify-center gap-1 py-10'>
       <div className='w-full flex items-center justify-center gap-10'>
         <div className='text-base w-60 h-12 tracking-wide border-[1px] border-gray-400
          rounded-md flex items-center justify-center gap-2 hover:border-blue-600 cursor-pointer duration-300'>
