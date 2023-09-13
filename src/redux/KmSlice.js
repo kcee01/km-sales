@@ -52,7 +52,15 @@ export const KmSlice = createSlice({
                 item.quantity --;
             }
         },
-            
+        //========== user start here =======
+           
+           addUser: (state, action) => {
+            state.userInfo = action.payload;
+           },
+
+           removeUser: (state) => {
+            state.userInfo = null;
+           } 
 
         },
     },
@@ -63,5 +71,7 @@ export const {addToCart,
               resetCart,
               incrementQuantity,
               decrementQuantity,
+                 addUser,
+              removeUser,
             } = KmSlice.actions
 export default KmSlice.reducer;
