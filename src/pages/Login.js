@@ -10,14 +10,25 @@ import {
  } from "firebase/auth";
 import { ToastContainer,toast } from 'react-toastify';
 const Login = () => {
- 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     const handleGoogleLogin = (e) => {
         e.preventDefault();
         signInWithPopup(auth, provider).then((result) => {
             const user = result.user;
-            console.log(user);            
+                dispatch(
+                addUser({
+                    _id:user.uid,
+                    name: user.displayName,
+                    email: user.email,
+                    image:user.photoURL,
+                }) 
+             setTimeout(() => {
+                navigate('/')
+            },1500)
+            );
         }).catch((error) => {
             console.log(error);
         });
