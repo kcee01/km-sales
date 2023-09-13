@@ -10,4 +10,8 @@ import paymentlogo from "./paymentlogo.jpg";
 
 import paymentblacklogo from "./paymentblacklogo.jpg";
 
-export{logo, notificationicon, cart, kmsales,paymentblacklogo,paymentlogo};
+import facebookLogo from "./facebookLogo.png";
+
+import googleLogo from "./googleLogo.png"
+
+export{logo, notificationicon, cart, kmsales,paymentblacklogo,paymentlogo,facebookLogo,googleLogo};

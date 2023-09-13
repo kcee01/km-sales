@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import CartItem from "./CartItem";
 
+import { Link } from 'react-router-dom';
+
 import { useSelector } from 'react-redux';
 const Cart = () => {
 
@@ -45,9 +47,12 @@ const Cart = () => {
             <p className='font-titleFont font-semibold flex justify-between nt-6'>
               Total <span className='text-xl font-bold'>${totalAmount}</span>
             </p>
+
+            <Link to="/Login">
                 <button className='text-base bg-black text-white w-full py-3 nt-6 hover:bg-gray-800 duration-300'>
                    proceed to checkout
                 </button>
+            </Link>    
        </div>
     </div>
   </div>
