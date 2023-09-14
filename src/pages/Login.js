@@ -24,12 +24,14 @@ const Login = () => {
                     name: user.displayName,
                     email: user.email,
                     image:user.photoURL,
-                }) 
+                })
+                ); 
              setTimeout(() => {
-                navigate('/')
-            },1500)
-            );
-        }).catch((error) => {
+                navigate("/")
+            }, 1500);
+        
+        })
+        .catch((error) => {
             console.log(error);
         });
     };
