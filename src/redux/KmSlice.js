@@ -66,12 +66,12 @@ export const KmSlice = createSlice({
     },
 );
 
-export const {addToCart,
-              deleteItem,
-              resetCart,
-              incrementQuantity,
-              decrementQuantity,
-                 addUser,
-              removeUser,
+    export const {addToCart,
+                deleteItem,
+                resetCart,
+                incrementQuantity,
+                decrementQuantity,
+                addUser,
+                removeUser,
             } = KmSlice.actions
 export default KmSlice.reducer;
