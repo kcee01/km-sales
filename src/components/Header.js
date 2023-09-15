@@ -13,6 +13,9 @@ const Header = () => {
    const productData = useSelector((state) => state.km.productData);
     console.log(productData); 
 
+    const userInfo = useSelector((state) => state.km.userInfo);
+        console.log(userInfo);
+
   return (
     
     <div className="w-full h-20 bg-white border-b-[1px] border-b-gray-800 font-titleFont sticky top-0 z-50" >
@@ -51,6 +54,24 @@ const Header = () => {
                         </span>
                     </div>
                 </Link>
+
+                <Link to="/Login">
+                
+                <img
+                className="w-8 h-8 rounded-full"
+                 src={
+                    userInfo
+                    ? userInfo.image
+                    :
+                    "https://lh3.googleusercontent.com/a/ACg8ocJ52S49pJf0Cp2DUZZzn7cfFobgFhzgrth0U9LxBROv=s96-c"
+                } alt=""/>
+                
+                </Link>
+
+                {
+                    userInfo && <p className="text-base font-titleFont font-semibold underline underline-offset-2">
+                        {userInfo.name}</p>
+                }
                 
             </div>
         </div>

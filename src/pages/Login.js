@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 
 import { ToastContainer,toast } from 'react-toastify';
 
-import { addUser } from '../redux/KmSlice';
+import { addUser, removeUser } from '../redux/KmSlice';
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -48,6 +48,7 @@ const Login = () => {
         signOut(auth)
         .then(() =>{
             toast.success("Log Out successfully!");
+            dispatch(removeUser());
         })
         .catch((error) =>{
             console.log(error);
