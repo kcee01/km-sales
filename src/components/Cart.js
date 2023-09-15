@@ -3,12 +3,21 @@ import React, { useEffect, useState } from 'react'
 import CartItem from "./CartItem";
 
 import { useSelector } from 'react-redux';
+
+import { ToastContainer,toast } from 'react-toastify';
+
+import  StripeCheckout  from 'react-stripe-checkout';
+
 const Cart = () => {
 
   const productData = useSelector((state) => state.km.productData);
    
+  const userInfo = useSelector((state) => state.km.userInfo);
+  console.log(userInfo);
 
   const [totalAmount, settotalAmount] = useState("");
+
+  const [Paynow, setPayNow] = useState(false);
 
   useEffect(()=> {
     let price = 0;
@@ -18,6 +27,15 @@ const Cart = () => {
     });
     settotalAmount(price.toFixed(2));
   },[productData]);
+
+    const handleCheckout = () =>{
+      if (userInfo) {
+        setPayNow(true);
+      } else{
+        toast.error("Please sign in to checkout");
+      }
+    }
+
   return (
 
     <div>
@@ -47,12 +65,40 @@ const Cart = () => {
             </p>
 
            
-                <button className='text-base bg-black text-white w-full py-3 nt-6 hover:bg-gray-800 duration-300'>
+                <button
+                  onClick={handleCheckout} 
+                  className='text-base bg-black text-white w-full py-3 nt-6 hover:bg-gray-800 duration-300'>
                    proceed to checkout
                 </button>
-              
+
+                  {Paynow && (
+
+                      <div className='w-full mt-6 flex items-center justify-center'>
+                          <StripeCheckout
+                            name="KM SALES Online Shopping" 
+                            description={`Your Payment Amount is $${totalAmount}`} 
+                            Label="Pay to KM SALES" 
+                            amount={totalAmount * 100} 
+                            stripeKey="pk_test_51NqaCMEov6EwWo8tUHzdNAEBEj2oMXvGQsDuIpsykanu2txgASO6b6YJHJFgqhsPhd7ZezwOXqI5e1nXkhF4QFTW00GLXJpl51"
+                            //token={payment} 
+                            email = {userInfo.email}
+                      />
+                      </div>
+                  )}
        </div>
     </div>
+    <ToastContainer
+          position='top-left'
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='dark'
+          />
   </div>
   )
 }
