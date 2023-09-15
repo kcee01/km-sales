@@ -63,7 +63,7 @@ const Header = () => {
                     userInfo
                     ? userInfo.image
                     :
-                    "https://lh3.googleusercontent.com/a/ACg8ocJ52S49pJf0Cp2DUZZzn7cfFobgFhzgrth0U9LxBROv=s96-c"
+                    "https://www.pngkit.com/png/detail/808-8088160_loginsignupwishlist-transparent-login-icon.png"
                 } alt=""/>
                 
                 </Link>

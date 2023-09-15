@@ -14,4 +14,4 @@ import facebookLogo from "./facebookLogo.png";
 
 import googleLogo from "./googleLogo.png"
 
-export{logo, notificationicon, cart, kmsales,paymentblacklogo,paymentlogo,facebookLogo,googleLogo};
+export{logo, notificationicon, cart, kmsales,paymentblacklogo,paymentlogo,facebookLogo,googleLogo,};
