@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.08fe54d3.css",
+    "main.js": "/static/js/main.3f6361f9.js",
+    "static/media/notificationicon.jpg": "/static/media/notificationicon.d317379fff5b36146dba.jpg",
+    "static/media/logo.png": "/static/media/logo.6eb3388da279ceac23c8.png",
+    "static/media/paymentlogo.jpg": "/static/media/paymentlogo.ce7bf8076d00f7d1e9b0.jpg",
+    "static/media/paymentblacklogo.jpg": "/static/media/paymentblacklogo.f971b0a27503052e6dc0.jpg",
+    "static/media/kmsales.png": "/static/media/kmsales.e9b92f631675bed995e3.png",
+    "index.html": "/index.html",
+    "main.08fe54d3.css.map": "/static/css/main.08fe54d3.css.map",
+    "main.3f6361f9.js.map": "/static/js/main.3f6361f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08fe54d3.css",
+    "static/js/main.3f6361f9.js"
+  ]
+}

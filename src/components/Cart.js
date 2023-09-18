@@ -55,13 +55,15 @@ const Cart = () => {
                 <p>
                   Delivery{" "}
                   <span className='font-titleFont text-sm pl-3'>
-                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, voluptate. Quae, beatae quis? Sit ipsam dolores sed exercitationem, eius cum autem voluptatibus iusto et nisi! Repellat adipisci laborum quasi atque?
+                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, 
+                     voluptate. Quae, beatae quis? Sit ipsam dolores sed exercitationem, 
+                     eius cum autem voluptatibus iusto et nisi! Repellat adipisci laborum quasi atque?
                   </span>
                 </p>
           </div>
 
             <p className='font-titleFont font-semibold flex justify-between nt-6'>
-              Total <span className='text-xl font-bold'>${totalAmount}</span>
+              Total <span className='text-xl font-bold'>P{totalAmount}</span>
             </p>
 
            
@@ -76,7 +78,7 @@ const Cart = () => {
                       <div className='w-full mt-6 flex items-center justify-center'>
                           <StripeCheckout
                             name="KM SALES Online Shopping" 
-                            description={`Your Payment Amount is $${totalAmount}`} 
+                            description={`Your Payment Amount is P${totalAmount}`} 
                             Label="Pay to KM SALES" 
                             amount={totalAmount * 100} 
                             stripeKey="pk_test_51NqaCMEov6EwWo8tUHzdNAEBEj2oMXvGQsDuIpsykanu2txgASO6b6YJHJFgqhsPhd7ZezwOXqI5e1nXkhF4QFTW00GLXJpl51"
