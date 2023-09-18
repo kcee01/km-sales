@@ -39,7 +39,7 @@ const CartItem = () => {
                     <img className='w-32 h-32 object-cover' src={item.image} alt="productimg" />
                 </div>
                 <h2 className='w-52'>{item.title}</h2>
-                <p className='w-10'>${item.price}</p>
+                <p className='w-10'>P{item.price}</p>
             <div className='w-52 flex items-center justify-between text-gray-500 gap-4 border p-3'>  
                 <p className='text-sm'>Quantity</p>
                <div className='flex items-center gap-4 text-sm font-semibold'> 
@@ -55,7 +55,8 @@ const CartItem = () => {
                 })
                 )
               }
-                className='border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white
+                className='border h-5 font-normal text-lg flex items-center justify-center 
+                px-2 hover:bg-gray-700 hover:text-white
                  cursor-pointer duration-300 active:bg-black'>
                     -
                 </span>
@@ -72,11 +73,12 @@ const CartItem = () => {
                 })
                 ) 
               }
-                className='border h-5 font-normal text-lg flex items-center justify-center px-2 hover:bg-gray-700 hover:text-white
+                className='border h-5 font-normal text-lg flex items-center 
+                justify-center px-2 hover:bg-gray-700 hover:text-white
                  cursor-pointer duration-300 active:bg-black'>+</span>
             </div>
         </div>
-        <p className='w-14'>${item.quantity * item.price}</p>
+        <p className='w-14'>P{item.quantity * item.price}</p>
     </div> 
         ))
     }
@@ -88,7 +90,8 @@ const CartItem = () => {
         </button>
 
         <Link to="/">
-            <button className='mt-8 ml-7 flex items-center gap-1 text-gray-400 hover:text-black duration-300'>
+            <button className='mt-8 ml-7 flex items-center gap-1 text-gray-400 hover:text-black 
+            duration-300'>
                 <span>
                     <HiOutlineArrowLeft/>
                 </span>

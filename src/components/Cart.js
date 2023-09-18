@@ -48,7 +48,7 @@ const Cart = () => {
             <h2 className='text-2xl font-medium'>Cart Totals</h2>
               <p className='flex items-center gap-4 text-base'>Subtotal{" "}
                 <span className='font-titleFont font-bold text-lg'>
-                  ${totalAmount}
+                  P{totalAmount}
                 </span>
               </p>
 
