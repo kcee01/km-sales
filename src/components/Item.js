@@ -37,7 +37,7 @@ const Item = () => {
 
          {
                 Details.isNew && (
-                  <p className='bg-black text-white font-semibold font-titleFont px-8 py-1 '>
+                  <p className='bg-red text-white font-semibold font-titleFont px-8 py-1 '>
                     Sale
                   </p>
                 )
