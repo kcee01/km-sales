@@ -55,8 +55,8 @@ const ProductsCard = ({Product}) => {
                 <div className='flex justify-end gap-2 relative overflow-hidden w-28 text-sm'>
                     <div className='flex gap-2 transform group-hover:translate-x-24
                     transition-transform duration-500'>
-                      <p className="line-through text-gray-500">${Product.oldPrice}</p>
-                      <p className="font-semibold">${Product.price}</p>
+                      <p className="line-through text-gray-500">P{Product.oldPrice}</p>
+                      <p className="font-semibold">P{Product.price}</p>
                     </div>  
 
                     <p onClick={()=> dispatch(addToCart({
