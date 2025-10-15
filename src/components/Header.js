@@ -1,6 +1,6 @@
 import React from "react"
 
-import { logo } from "../assests/index";
+import { logob } from "../assests/index";
 
 import { cart } from "../assests/index"
 
@@ -23,7 +23,7 @@ const Header = () => {
         mx-auto flex items-center justify-between">
            <Link to="/"> 
             <div>
-                <img className="w-80"  src={logo} alt="logo" />
+                <img className="w-80"  src={logob} alt="logo" />
             </div>
             </Link>
         <div className="flex items-center gap-8 pr-10">
